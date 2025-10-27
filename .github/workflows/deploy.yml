@@ -22,4 +22,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local_path: './'          
           remote_path: /www/yagoda-coffee58.ru/ 
-          exclude: '.git*,.github*,node_modules'
+
