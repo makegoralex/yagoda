@@ -1,9 +1,9 @@
-name: Deploy to REG.RU
+name: Deploy via SFTP to REG.RU
 
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
@@ -13,11 +13,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy using SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
+          username: u1618701
           server: 37.140.192.191
-          username: u1618701 
+          port: 22
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp       
-          server-dir: /www/yagoda-coffee58.ru/ 
+          local_path: './'          
+          remote_path: /www/yagoda-coffee58.ru/ 
+          exclude: '.git*,.github*,node_modules'
