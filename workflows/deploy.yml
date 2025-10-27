@@ -10,14 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy files via SFTP
+      - name: Upload files to hosting
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 37.140.192.191:22
-          username: u1618701        
+          username: u1618701             
           password: ${{ secrets.23TmExo2wJnE4HCz }}
-          server-dir: /www/yagoda-coffee58.ru/  
-          protocol: ftps            
+          protocol: ftps                  
+          server-dir:  /www/yagoda-coffee58.ru/ 
+
+
+
+
