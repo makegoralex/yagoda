@@ -17,7 +17,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: 37.140.192.191
-          username: u1618701               
+          username: u1618701 
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps                  
+          protocol: ftps       
           server-dir: /www/yagoda-coffee58.ru/ 
