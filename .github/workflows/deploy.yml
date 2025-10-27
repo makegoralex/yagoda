@@ -19,5 +19,5 @@ jobs:
           server: 37.140.192.191
           username: u1618701 
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: sftp       
+          protocol: ftp       
           server-dir: /www/yagoda-coffee58.ru/ 
