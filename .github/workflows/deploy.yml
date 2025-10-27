@@ -21,5 +21,5 @@ jobs:
           port: 22
           password: ${{ secrets.FTP_PASSWORD }}
           local_path: './'          
-          remote_path: /www/yagoda-coffee58.ru/ 
+          remote_path: /var/www/u1618701/data/www/yagoda-coffee58.ru
 
