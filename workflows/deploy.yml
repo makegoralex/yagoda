@@ -3,7 +3,7 @@ name: Deploy to REG.RU
 on:
   push:
     branches:
-      - main  
+      - main 
 
 jobs:
   deploy:
@@ -13,14 +13,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Upload files to hosting
+      - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: 37.140.192.191:22
-          username: u1618701             
-          password: ${{ secrets.23TmExo2wJnE4HCz }}
+          server: 37.140.192.191:22             
+          username: u1618701            
+          password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps                  
-          server-dir:  /www/yagoda-coffee58.ru/ 
+          port: 22                        
+          local-dir: ./                   
+          server-dir: /www/yagoda-coffee58.ru/ 
+          exclude: |
+            .github*
+            **/.git*
+            **/node_modules/**
+
+
 
 
 
