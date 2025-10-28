@@ -147,3 +147,46 @@ small {
   background: rgba(106, 188, 118, 0.15);
   color: #2f6d3a;
 }
+
+@media (max-width: 900px) {
+  header {
+    padding: 1.25rem 1.5rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  .inline-actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1.25rem;
+  }
+
+  .inline-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .inline-actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
