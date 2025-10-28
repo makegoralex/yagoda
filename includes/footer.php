@@ -17,6 +17,7 @@
         <?php endif; ?>
       </div>
     </footer>
+
     <script>
       (function () {
         const toggle = document.querySelector('.nav-toggle');
@@ -44,5 +45,6 @@
         });
       })();
     </script>
+
   </body>
 </html>

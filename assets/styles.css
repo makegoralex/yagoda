@@ -61,6 +61,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
+
   gap: 1rem;
 }
 
@@ -80,6 +81,7 @@ header {
 .nav-toggle:focus-visible {
   outline: 3px solid rgba(226, 83, 74, 0.35);
   outline-offset: 2px;
+
 }
 
 .branding h1 {
@@ -108,10 +110,13 @@ nav a:hover {
   background: rgba(108, 46, 106, 0.12);
 }
 
+
 .site-nav {
   display: flex;
   align-items: center;
 }
+
+=======
 
 main {
   padding: 2rem 1.5rem 3rem;
@@ -190,6 +195,7 @@ main {
   max-width: 620px;
 }
 
+
 .inline-actions {
   display: flex;
   flex-wrap: wrap;
@@ -201,6 +207,7 @@ main {
   text-align: center;
   min-width: 180px;
 }
+
 
 .list-inline {
   padding-left: 1.2rem;
@@ -272,6 +279,7 @@ footer .footer-inner {
   display: block;
   margin-bottom: 0.5rem;
 }
+
 
 @media (max-width: 960px) {
   .header-inner {
@@ -382,5 +390,15 @@ footer .footer-inner {
 
   .inline-actions .button {
     width: 100%;
+
+@media (max-width: 720px) {
+  nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero h2 {
+    font-size: 2.25rem;
+
   }
 }
