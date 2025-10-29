@@ -11,7 +11,7 @@ $photos = $about['photos'] ?? [];
 $highlights = $about['highlights'] ?? [];
 ?>
 <section class="hero">
-  <div>
+
     <h2><?= htmlspecialchars($about['intro'] ?? 'Ягода Coffee — уютная кофейня в Пензе') ?></h2>
     <p><?= nl2br(htmlspecialchars($about['description'] ?? '')) ?></p>
     <div class="inline-actions">

@@ -116,7 +116,6 @@ nav a:hover {
   align-items: center;
 }
 
-=======
 
 main {
   padding: 2rem 1.5rem 3rem;
@@ -177,12 +176,12 @@ main {
 }
 
 .hero {
+
   display: grid;
   gap: 2.5rem;
   align-items: center;
   max-width: 1100px;
-  margin: 0 auto 3.5rem;
-  padding-top: 2rem;
+
 }
 
 .hero h2 {
@@ -194,6 +193,7 @@ main {
   margin: 0 0 1.25rem 0;
   max-width: 620px;
 }
+
 
 
 .inline-actions {
@@ -281,6 +281,7 @@ footer .footer-inner {
 }
 
 
+
 @media (max-width: 960px) {
   .header-inner {
     padding: 0.85rem 1.25rem;
@@ -288,6 +289,7 @@ footer .footer-inner {
 
   .hero {
     gap: 2rem;
+
   }
 
   .hero h2 {
@@ -365,7 +367,7 @@ footer .footer-inner {
   }
 
   .hero {
-    padding-top: 1.5rem;
+
   }
 
   .hero h2 {
@@ -390,15 +392,6 @@ footer .footer-inner {
 
   .inline-actions .button {
     width: 100%;
-
-@media (max-width: 720px) {
-  nav ul {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .hero h2 {
-    font-size: 2.25rem;
 
   }
 }

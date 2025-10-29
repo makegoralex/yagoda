@@ -8,16 +8,7 @@ include __DIR__ . '/includes/header.php';
 $catalog = $siteData['dessertCatalog'] ?? [];
 $items = $catalog['items'] ?? [];
 ?>
-<section class="section">
-  <div class="section-header">
-    <div>
-      <h2>Каталог десертов</h2>
-      <?php if (!empty($catalog['intro'])): ?>
-        <p><?= htmlspecialchars($catalog['intro']) ?></p>
-      <?php endif; ?>
-    </div>
-    <a class="button" href="mailto:<?= htmlspecialchars(($siteData['contact']['email'] ?? 'hello@yagoda.coffee')) ?>">Запросить прайс</a>
-  </div>
+
   <?php if (!empty($catalog['minimumOrder']) || !empty($catalog['delivery'])): ?>
     <div class="card">
       <?php if (!empty($catalog['minimumOrder'])): ?>
@@ -29,7 +20,7 @@ $items = $catalog['items'] ?? [];
     </div>
   <?php endif; ?>
 </section>
-<section class="section">
+
   <div class="grid three">
     <?php foreach ($items as $item): ?>
       <article class="card">

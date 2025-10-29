@@ -11,17 +11,7 @@ $requirements = $mobile['requirements'] ?? [];
 $pricing = $mobile['pricingExamples'] ?? [];
 $extras = $mobile['extras'] ?? [];
 ?>
-<section class="section">
-  <div class="section-header">
-    <div>
-      <h2><?= htmlspecialchars($mobile['headline'] ?? 'Выездной кофебар') ?></h2>
-      <?php if (!empty($mobile['subheadline'])): ?>
-        <p><?= htmlspecialchars($mobile['subheadline']) ?></p>
-      <?php endif; ?>
-    </div>
-    <a class="button" href="mailto:<?= htmlspecialchars(($siteData['contact']['email'] ?? 'hello@yagoda.coffee')) ?>">Запросить смету</a>
-  </div>
-  <p><?= nl2br(htmlspecialchars($mobile['description'] ?? 'Организуем кофейную зону на вашем мероприятии.')) ?></p>
+
 </section>
 <section class="section">
   <div class="section-header">
@@ -45,7 +35,7 @@ $extras = $mobile['extras'] ?? [];
     <?php endforeach; ?>
   </ul>
 </section>
-<section class="section">
+
   <div class="section-header">
     <h2>Примеры пакетов</h2>
   </div>
