@@ -1,0 +1,25 @@
+name: Deploy via SFTP to REG.RU
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy using SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: u1618701
+          server: 37.140.192.191
+          port: 22
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_path: './'          
+          remote_path: /var/www/u1618701/data/www/yagoda-coffee58.ru
+

@@ -38,9 +38,7 @@ $tagline = $branding['tagline'] ?? '';
             <small><?= htmlspecialchars($tagline) ?></small>
           <?php endif; ?>
         </div>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Меню</button>
-        <nav class="site-nav" aria-label="Основное меню">
-          <ul id="primary-nav">
+
             <li><a href="index.php" class="<?= $active === 'home' ? 'active' : '' ?>">О кофейне</a></li>
             <li><a href="mobile-bar.php" class="<?= $active === 'mobile-bar' ? 'active' : '' ?>">Выездной бар</a></li>
             <li><a href="desserts.php" class="<?= $active === 'desserts' ? 'active' : '' ?>">Десерты</a></li>

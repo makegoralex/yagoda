@@ -61,6 +61,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
+
   gap: 1rem;
 }
 
@@ -80,6 +81,7 @@ header {
 .nav-toggle:focus-visible {
   outline: 3px solid rgba(226, 83, 74, 0.35);
   outline-offset: 2px;
+
 }
 
 .branding h1 {
@@ -108,10 +110,12 @@ nav a:hover {
   background: rgba(108, 46, 106, 0.12);
 }
 
+
 .site-nav {
   display: flex;
   align-items: center;
 }
+
 
 main {
   padding: 2rem 1.5rem 3rem;
@@ -172,56 +176,12 @@ main {
 }
 
 .hero {
-  position: relative;
+
   display: grid;
   gap: 2.5rem;
   align-items: center;
   max-width: 1100px;
-  margin: 0 auto 3.75rem;
-  padding: 3.5rem 1.25rem 3.5rem;
-  background: linear-gradient(135deg, rgba(108, 46, 106, 0.08), rgba(226, 83, 74, 0.12));
-  background: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--primary-color) 16%, transparent) 0%,
-    color-mix(in srgb, var(--accent-color) 22%, transparent) 100%
-  );
-  border-radius: 28px;
-  overflow: hidden;
-}
 
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.45), rgba(226, 83, 74, 0));
-  background: radial-gradient(
-    circle at 30% 30%,
-    color-mix(in srgb, #ffffff 70%, var(--background-color) 30%),
-    color-mix(in srgb, var(--accent-color) 8%, transparent)
-  );
-  opacity: 0.65;
-  filter: blur(0px);
-  animation: floatBlob 11s ease-in-out infinite;
-}
-
-.hero::before {
-  top: -140px;
-  right: -80px;
-}
-
-.hero::after {
-  bottom: -160px;
-  left: -120px;
-  animation-delay: -4s;
-  background: radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.55), rgba(108, 46, 106, 0));
-  background: radial-gradient(
-    circle at 70% 70%,
-    color-mix(in srgb, #ffffff 78%, var(--background-color) 22%),
-    color-mix(in srgb, var(--primary-color) 12%, transparent)
-  );
 }
 
 .hero h2 {
@@ -234,69 +194,7 @@ main {
   max-width: 620px;
 }
 
-.hero .badge {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(6px);
-  color: var(--primary-color);
-}
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  animation: fadeUp 0.9s ease forwards;
-  opacity: 0;
-}
-
-.hero--compact {
-  padding: 3rem 1.25rem 3.25rem;
-}
-
-.hero--wide {
-  max-width: none;
-  border-radius: 0;
-  margin: 0 -1.25rem 3.5rem;
-}
-
-.hero--wide .hero-content {
-  margin: 0 auto;
-  max-width: 1100px;
-}
-
-@keyframes floatBlob {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  40% {
-    transform: translate3d(-10px, 16px, 0) scale(1.05);
-  }
-  70% {
-    transform: translate3d(14px, -12px, 0) scale(0.97);
-  }
-}
-
-@keyframes fadeUp {
-  from {
-    transform: translate3d(0, 18px, 0);
-    opacity: 0;
-  }
-  to {
-    transform: translate3d(0, 0, 0);
-    opacity: 1;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero::before,
-  .hero::after,
-  .hero-content {
-    animation: none !important;
-  }
-
-  .hero-content {
-    opacity: 1;
-  }
-}
 
 .inline-actions {
   display: flex;
@@ -309,6 +207,7 @@ main {
   text-align: center;
   min-width: 180px;
 }
+
 
 .list-inline {
   padding-left: 1.2rem;
@@ -381,22 +280,7 @@ footer .footer-inner {
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 1024px) {
-  .hero {
-    padding: 3rem 1.5rem 3.25rem;
-    margin-bottom: 3.5rem;
-  }
 
-  .hero::before,
-  .hero::after {
-    width: 260px;
-    height: 260px;
-  }
-
-  .hero h2 {
-    font-size: 2.45rem;
-  }
-}
 
 @media (max-width: 960px) {
   .header-inner {
@@ -405,7 +289,7 @@ footer .footer-inner {
 
   .hero {
     gap: 2rem;
-    padding: 2.75rem 1.5rem 3rem;
+
   }
 
   .hero h2 {
@@ -483,8 +367,7 @@ footer .footer-inner {
   }
 
   .hero {
-    margin: 0 auto 3.25rem;
-    padding: 2.25rem 1.15rem 2.75rem;
+
   }
 
   .hero h2 {
@@ -509,5 +392,6 @@ footer .footer-inner {
 
   .inline-actions .button {
     width: 100%;
+
   }
 }
